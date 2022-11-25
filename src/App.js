@@ -1,4 +1,7 @@
 import Marginals from "./components/Marginals";
+import Card from "./components/Card";
+import Grid from "./components/Grid";
+
 
 function App() {
   return (
@@ -6,7 +9,14 @@ function App() {
       <header>
         <Marginals />
       </header>
-      <h1>Hello World</h1>
+
+      <Grid />
+
+
+      <footer>
+        <Card />
+        <Marginals />
+      </footer>
     </div>
   );
 }
