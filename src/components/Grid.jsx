@@ -1,26 +1,27 @@
 import styled from "styled-components";
+import React from "react";
 
 function Grid() {
   return (
     <WholeGrid>
       <FirstCard>
         <Patterns width="128" height="192" xmlns="http://www.w3.org/2000/svg">
-          <g fill="none" fill-rule="evenodd">
+          <g fill="none" fillRule="evenodd">
             <path fill="#552049" d="M0 0h64v128H0z" />
-            <circle stroke="#FFF7F0" stroke-width="4" cx="32" cy="32" r="14" />
+            <circle stroke="#FFF7F0" strokeWidth="4" cx="32" cy="32" r="14" />
             <g transform="translate(32 32)">
               <rect fill="#F6A560" x="32" width="64" height="32" rx="16" />
               <path fill="#61C4B7" d="m0 128 32 32v-32zM32 96l32 32V96z" />
               <circle
                 stroke="#FFF7F0"
-                stroke-width="4"
+                strokeWidth="4"
                 cx="80"
                 cy="16"
                 r="14"
               />
               <circle
                 stroke="#FFF7F0"
-                stroke-width="4"
+                strokeWidth="4"
                 cx="80"
                 cy="16"
                 r="14"
@@ -201,7 +202,29 @@ const WholeGrid = styled.div`
   align-items: center;
   row-gap: 24px;
   margin-bottom: 100px;
+  @media screen and (min-width: 768px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 24px;
+    grid-row-gap: 24px;
+    margin-bottom: 120px;
+    margin-left: 39px;
+    margin-right: 39px;
+    width: 690px;
+    height: 570px;
+  }
+  @media screen and (min-width: 1440px) {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    margin-left: 165px;
+    margin-right: 165px;
+    margin-bottom: 136px;
+    width: 756px;
+    height: 364px;
+  }
 `;
+
 
 const FirstCard = styled.div`
   width: 343px;
@@ -212,6 +235,22 @@ const FirstCard = styled.div`
   flex-direction: column;
   justify-content: space-between;
   padding: 24px;
+  @media screen and (min-width: 767.5px) {
+    grid-area: 1 / 1 / 3 / 2;
+    width: 333px;
+  }
+  @media screen and (min-width: 1439.5px) {
+    width: 354px;
+  }
+`;
+
+const LittleCards = styled.div`
+  display: flex;
+  column-gap: 23px;
+  @media screen and (min-width: 767.5px) {
+    grid-area: 1 / 2 / 2 / 3;
+  }
+
 `;
 
 const Paragraphs = styled.p`
@@ -230,6 +269,12 @@ const SecondCard = styled.div`
   flex-direction: column;
   justify-content: space-between;
   padding: 24px;
+  @media screen and (min-width: 767.5px) {
+    width: 155px;
+  }
+  @media screen and (min-width: 1439.5px) {
+    width: 164px;
+  }
 `;
 
 const ThirdCard = styled.div`
@@ -241,6 +286,12 @@ const ThirdCard = styled.div`
   flex-direction: column;
   justify-content: space-between;
   padding: 24px;
+  @media screen and (min-width: 767.5px) {
+    width: 155px;
+  }
+  @media screen and (min-width: 1439.5px) {
+    width: 164px;
+  }
 `;
 
 const FourthCard = styled.div`
@@ -252,6 +303,13 @@ const FourthCard = styled.div`
   flex-direction: column;
   justify-content: space-between;
   padding: 24px;
+  @media screen and (min-width: 767.5px) {
+    grid-area: 2 / 2 / 3 / 3;
+    width: 333px;
+  }
+  @media screen and (min-width: 1439.5px) {
+    width: 354px;
+  }
 `;
 
 const FifthCard = styled.div`
@@ -263,6 +321,16 @@ const FifthCard = styled.div`
   flex-direction: column;
   justify-content: space-between;
   padding: 24px;
+  @media screen and (min-width: 767.5px) {
+    grid-area: 3 / 1 / 4 / 2;
+    width: 333px;
+  }
+  @media screen and (min-width: 1439.5px) {
+    grid-area: 1 / 3 / 2 / 4;
+  }
+  @media screen and (min-width: 1439.5px) {
+    width: 354px;
+  }
 `;
 
 const SixthCard = styled.div`
@@ -274,12 +342,20 @@ const SixthCard = styled.div`
   flex-direction: column;
   justify-content: space-between;
   padding: 24px;
+  @media screen and (min-width: 767.5px) {
+    grid-area: 3 / 2 / 4 / 3;
+    width: 333px;
+  }
+  @media screen and (min-width: 1439.5px) {
+    grid-area: 2 / 3 / 3 / 4;
+  }
+  @media screen and (min-width: 1439.5px) {
+    width: 354px;
+    height: 158px;
+  }
 `;
 
-const LittleCards = styled.div`
-  display: flex;
-  column-gap: 25px;
-`;
+
 
 const Patterns = styled.svg`
   align-self: flex-end;

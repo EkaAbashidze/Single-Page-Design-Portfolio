@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import Button from "./Button";
+import React from "react";
 
 function Card() {
   return (
@@ -9,7 +11,10 @@ function Card() {
         is for us to discuss your project during a free consultation. Then we
         can move forward from there.
       </Para>
-      <Button>Free Consultation</Button>
+
+      {/* <div> */}
+      <Button />
+      {/* </div> */}
     </Cardbox>
   );
 }
@@ -24,36 +29,42 @@ const Cardbox = styled.div`
   border-radius: 10px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   text-align: center;
   padding: 49px 24px 48px 24px;
   gap: 24px;
   margin: auto;
-`;
-
-const Button = styled.button`
-  background-color: #eb7565;
-  border: 28px;
-  width: 176px;
-  height: 44px;
-  color: #fff7f0;
-  font-family: "Plus Jakarta Sans", sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 28px;
-  font-size: 14px;
-  line-height: 28px;
+  margin-bottom: 0;
+  @media screen and (min-width: 767.5px) {
+    margin-bottom: 40px;
+    width: 95%;
+  }
+  @media screen and (min-width: 1439.5px) {
+    max-width: 1110px;
+  }
 `;
 
 const Heading = styled.h1`
   font-size: 26px;
   font-weight: 700;
   line-height: 33px;
+  @media screen and (min-width: 767.5px) {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  @media screen and (min-width: 1439.5px) {
+    font-size: 40px;
+    line-height: 50px;
+  }
 `;
 
 const Para = styled.p`
   font-weight: 500;
   font-size: 16px;
   line-height: 26px;
+  @media screen and (min-width: 767.5px) {
+    font-size: 18px;
+    line-height: 28px;
+  }
 `;
