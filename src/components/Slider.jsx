@@ -107,25 +107,31 @@
     `;
 
     const ArrowLeft = styled.div`
-    background-color: #030303;
-    width: 64px;
-    height: 64px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
+        background-color: #030303;
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        :hover {
+            background-color: #755cde;
+        }
     `;
 
     const ArrowRight = styled.div`
-    background-color: #030303;
-    width: 64px;
-    height: 64px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
+        background-color: #030303;
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        :hover {
+            background-color: #755cde;
+        }
     `;
 
     const ContainerStyles = styled.div`

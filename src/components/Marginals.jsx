@@ -50,9 +50,13 @@ const Button = styled.button`
   font-weight: 700;
   font-size: 14px;
   line-height: 28px;
+  cursor: pointer;
   @media screen and (min-width: 767.5px) {
     width: 228px;
     height: 56px;
     font-size: 16px;
+  }
+  :hover {
+    background-color: #755cde;
   }
 `;
